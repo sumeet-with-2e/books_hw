@@ -1,0 +1,9 @@
+<div class="books-container">
+    <div class="book-list" *ngFor="let book of wishlist; let i = index">
+        <h3>{{ book.title }}</h3>
+        <img [src]="book.picture" alt="{{ book.title }}">
+        <p>{{ book.publisher }} - {{ book.publish_date }}</p>
+        <p>{{ book.description }}</p>
+        <button mat-raised-button color="primary" (click)="removeFromWishlist(i)">Remove from Wishlist</button>
+    </div>
+</div>

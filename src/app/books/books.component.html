@@ -1,0 +1,11 @@
+<div class="books-container">
+    <app-search-bar class="search-bar" (searchChange)="onSearchChange($event)"></app-search-bar>
+    <div class="book-list" *ngFor="let book of allbooks">
+      <h3>{{ book.title }}</h3>
+      <img [src]="book.picture" alt="{{ book.title }}">
+      <p>{{ book.publisher }} - {{ book.publish_date }}</p>
+      <p>{{ book.description }}</p>
+      <button mat-raised-button color="primary" (click)="addToWishlist(book)">Add to Wishlist</button>
+    </div>
+</div>
+  
